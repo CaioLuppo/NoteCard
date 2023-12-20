@@ -1,0 +1,6 @@
+package CaioLuppo.note_card
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity() {
+}

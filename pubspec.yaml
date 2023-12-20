@@ -1,0 +1,25 @@
+name: note_card
+description: "Aplicativo de notas."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.2.3 <4.0.0'
+
+dependencies:
+
+
+  # Default
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+
+
+  # Default
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
