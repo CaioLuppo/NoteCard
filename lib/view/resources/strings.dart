@@ -7,3 +7,5 @@ const emptyMessage = "Ainda não há notas!\nDigite algo e pressione enter.";
 const emptyNoteMessage = "É impossível salvar uma nota vazia!";
 const snackBarActionString = "FECHAR";
 const cardInputHint = "Digite seu texto";
+const sureDialogTitle = "Excluir anotação";
+const sureDialogContent = "Tem certeza que deseja excluir o \"Texto Digitado";

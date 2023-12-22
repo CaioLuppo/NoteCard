@@ -6,9 +6,12 @@ const backgroundBoxDecoration = BoxDecoration(
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,
     colors: [
-      Color(0xFF204d5f),
-      Color(0xFF319b85),
+      blue,
+      green,
     ],
   ),
 );
 
+// Colors
+const blue = Color(0xFF204d5f);
+const green = Color(0xFF319b85);
