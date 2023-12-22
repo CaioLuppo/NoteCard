@@ -29,14 +29,19 @@ class NoteCardsScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          CardsSession(store: store, controller: controller),
+          Expanded(
+            child: Container(
+              clipBehavior: Clip.antiAlias,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: CardsSession(store: store, controller: controller),
+            ),
+          ),
+          const SizedBox(height: 16),
           TextInput(store: store, controller: controller),
         ],
       ),
     );
   }
 }
-
-
-
-

@@ -18,17 +18,18 @@ class NoteCardApp extends StatelessWidget {
       home: Scaffold(
         body: Container(
           decoration: backgroundBoxDecoration,
-          child: Column(
-            children: [
-              Expanded(
-                child: PageView(
+          child: SafeArea(
+            child: Column(
+              children: [
+                Expanded(
+                    child: PageView(
                   controller: pageController,
                   physics: const NeverScrollableScrollPhysics(),
                   children: const [LoginScreen(), NoteCardsScreen()],
-                )
-              ),
-              const PrivacyLabel(),
-            ],
+                )),
+                const PrivacyLabel(),
+              ],
+            ),
           ),
         ),
       ),

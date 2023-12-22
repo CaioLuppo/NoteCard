@@ -19,7 +19,6 @@ class CardList extends StatelessWidget {
       itemCount: store.cardsContents.length,
       physics: const BouncingScrollPhysics(),
       scrollDirection: Axis.vertical,
-      shrinkWrap: true,
       itemBuilder: (_, index) {
         return NoteCard(
           index,
