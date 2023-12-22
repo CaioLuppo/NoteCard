@@ -7,26 +7,21 @@ environment:
   sdk: ">=3.2.3 <4.0.0"
 
 dependencies:
-  # Mobx
-  flutter_mobx: ^2.2.0+1
-  mobx: ^2.2.3
-
-  # Shared Preferences
-  shared_preferences: ^2.2.2
-
-  # Default
   flutter:
     sdk: flutter
+  flutter_mobx: ^2.2.0+1
+  http: ^1.1.2
+  mobx: ^2.2.3
+  mockito: ^5.4.4
+  shared_preferences: ^2.2.2
+  url_launcher: ^6.2.2
 
 dev_dependencies:
-  # MobX
-  mobx_codegen: ^2.4.0
   build_runner: ^2.4.7
-
-  # Default
+  flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  mobx_codegen: ^2.4.0
 
 flutter:
   uses-material-design: true
