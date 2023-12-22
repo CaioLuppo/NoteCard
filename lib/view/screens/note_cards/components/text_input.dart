@@ -37,7 +37,8 @@ class TextInput extends StatelessWidget {
         ),
         onEditingComplete: () async {
           final text = controller.text;
-          if (text.isEmpty) {
+          final onlySpace = RegExp(r"^\s+$");
+          if (text.isEmpty || onlySpace.hasMatch(text)) {
             showErrorSnackBar(context, emptyNoteMessage);
           } else {
             canStop = false;
