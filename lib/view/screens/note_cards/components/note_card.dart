@@ -49,6 +49,7 @@ class NoteCard extends StatelessWidget {
                 builder: (_) => IconButton(
                   onPressed: () => removeIfCan(context, store, index),
                   icon: const Icon(Icons.delete),
+                  color: Colors.red.shade700,
                 ),
               ),
             ],
