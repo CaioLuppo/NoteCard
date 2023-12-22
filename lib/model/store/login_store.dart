@@ -2,9 +2,9 @@ import 'package:mobx/mobx.dart';
 
 part 'login_store.g.dart';
 
-class LoginStore = _LoginStore with _$LoginStore;
+class LoginStore = LoginStoreBase with _$LoginStore;
 
-abstract class _LoginStore with Store {
+abstract class LoginStoreBase with Store {
   @observable
   String user = "";
 

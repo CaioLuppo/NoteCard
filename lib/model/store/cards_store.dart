@@ -3,9 +3,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 part 'cards_store.g.dart';
 
-class CardsStore = _CardsStore with _$CardsStore;
+class CardsStore = CardsStoreBase with _$CardsStore;
 
-abstract class _CardsStore with Store {
+abstract class CardsStoreBase with Store {
   final cardsContentesKey = "cardsContents";
 
   @observable
@@ -54,13 +54,11 @@ abstract class _CardsStore with Store {
   void startEditing(int index) {
     editing = true;
     editingIndex = index;
-    print("editing: $editingIndex");
   }
 
   @action
   Future<void> updateCardContent(String text) async {
     final preferences = await SharedPreferences.getInstance();
-    print("CONT: $cardsContents, $editingIndex");
     cardsContents[editingIndex!] = text;
 
     preferences.setStringList(cardsContentesKey, cardsContents);
