@@ -2,6 +2,7 @@ library note_cards;
 
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:note_card/controller/app/snackbar_controller.dart';
 import 'package:note_card/controller/cards/note_card_controller.dart';
 import 'package:note_card/controller/cards/text_input_controller.dart';
 import 'package:note_card/model/store/cards_store.dart';

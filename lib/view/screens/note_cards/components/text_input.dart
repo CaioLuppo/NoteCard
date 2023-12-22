@@ -19,23 +19,35 @@ class TextInput extends StatelessWidget {
       },
       child: TextField(
         controller: controller,
+        textAlign: TextAlign.center,
         textInputAction: TextInputAction.send,
-        onSubmitted: (text) async {
-          canStop = false;
-          await editOrAddCard(text, store);
-          canStop = true;
-          controller.clear();
-        },
         decoration: InputDecoration(
           fillColor: Colors.white,
           filled: true,
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),
+            borderSide: BorderSide.none,
+          ),
+          hintText: cardInputHint,
+          hintStyle: const TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
           ),
         ),
+        onEditingComplete: () async {
+          final text = controller.text;
+          if (text.isEmpty) {
+            showErrorSnackBar(context, emptyNoteMessage);
+          } else {
+            canStop = false;
+            await editOrAddCard(text, store);
+            canStop = true;
+            controller.clear();
+            if (context.mounted) FocusScope.of(context).unfocus();
+          }
+        },
       ),
     );
   }
-
-  
 }

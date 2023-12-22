@@ -62,6 +62,7 @@ class NoteCard extends StatelessWidget {
             child: Text(
               content,
               textAlign: TextAlign.start,
+              style: const TextStyle(fontSize: 16),
             ),
           ),
         ],
